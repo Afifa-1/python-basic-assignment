@@ -7,6 +7,7 @@ print("After removing duplicates:", Student)
 
 total_marks = 0
 count = 0
+
 for student in Student:
     total_marks = total_marks + student[1]  
     count = count + 1
@@ -28,10 +29,3 @@ if student_to_find in names_tuple:
     print(f"\n{student_to_find} is in the tuple!")
 else:
     print(f"\n{student_to_find} is not in the tuple!")
-
-student_to_find = "David"
-if student_to_find in names_tuple:
-    print(f"{student_to_find} is in the tuple!")
-else:
-    print(f"{student_to_find} is not in the tuple!")
-
