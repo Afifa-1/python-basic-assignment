@@ -1,0 +1,46 @@
+data = "Ali-85, Sara-90, Ahmed-85, Zara-92, Ali-85"
+
+list_data = data.split(",")
+print(list_data)
+
+tuple_records = []
+for item in data.split(", "):
+    name, mark = item.split("-")
+    tuple_records.append((name, int(mark)))
+
+for record in tuple_records:
+    print(record)
+
+
+set_records = set(tuple_records) 
+print(set_records)
+
+dictionary_records = dict(set_records)
+print(dictionary_records)
+
+
+max_marks = 0
+top_student = ""
+
+for name, marks in dictionary_records.items():
+    if marks > max_marks:
+        max_marks = marks
+        top_student = name
+
+print("Highest marks:", max_marks)
+print("Top student:", top_student)
+
+
+names_list = []
+for item in data.split(", "):
+    name, mark = item.split("-")
+    names_list.append(name)
+
+names = tuple(names_list)
+print(names)
+
+marks_set = set()
+for name, marks in tuple_records:
+    marks_set.add(marks)
+
+print("Number of unique marks:" ,len(marks_set))
